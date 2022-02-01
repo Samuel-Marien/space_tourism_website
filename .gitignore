@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#cahier des charges
+starter-code
