@@ -1,3 +1,5 @@
+hmlt,
+body,
 * {
   box-sizing: border-box;
   font-family: Roboto;
@@ -7,4 +9,8 @@
 
 .font-Bellefair {
   font-family: 'Bellefair', serif;
+}
+
+.font-Barlow {
+  font-family: 'Barlow Condensed', sans-serif;
 }

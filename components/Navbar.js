@@ -4,10 +4,7 @@ import { styled } from '@mui/material/styles'
 
 import Box from '@mui/material/Box'
 
-const Mylink = (props) => {
-  const { title, href } = props
-
-  const MyA = styled('a')`
+const MyA = styled('a')`
     cursor: pointer;
     font-size: 1.3rem;
     padding: 2.5rem 0 2.5rem 0;
@@ -16,16 +13,20 @@ const Mylink = (props) => {
     :hover {
       transition: all .3s ease-out;
       color: #AEAFBB;
-      border-bottom: 4px solid #AEAFBB;
+      
+      box-shadow: 0px -3px 0px #AEAFBB inset;
     }
     :active {
       color: #ffffff;
-       border-bottom: 4px solid #ffffff;
+        box-shadow: 0px -3px 0px #AEAFBB inset;
   `
-  const MySpan = styled('span')`
-    font-weight: bold;
-    margin-right: 1rem;
-  `
+const MySpan = styled('span')`
+  font-weight: bold;
+  margin-right: 1rem;
+`
+
+const Mylink = (props) => {
+  const { title, href } = props
 
   return (
     <Link href={href}>
@@ -56,6 +57,7 @@ const Navbar = () => {
       />
       <Box
         sx={{
+          display: 'block',
           borderBottom: '1px solid #6E719B',
           width: '40%',
           transform: 'translate(10%)',
