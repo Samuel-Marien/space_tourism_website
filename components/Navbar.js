@@ -2,19 +2,21 @@ import React from 'react'
 import Link from 'next/link'
 import { styled } from '@mui/material/styles'
 
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
+
 import Box from '@mui/material/Box'
 
 const MyA = styled('a')`
     cursor: pointer;
     font-size: 1.3rem;
     padding: 2.5rem 0 2.5rem 0;
-    font-family: 'Barlow Condensed', sans-serif;
+
     color: #ffffff;
     :hover {
       transition: all .3s ease-out;
-      color: #AEAFBB;
+      color: gray;
       
-      box-shadow: 0px -3px 0px #AEAFBB inset;
+      box-shadow: 0px -3px 0px gray inset;
     }
     :active {
       color: #ffffff;
@@ -49,12 +51,12 @@ const Navbar = () => {
         pl: 15
       }}
     >
-      <img
-        src="images/logo.svg"
-        alt="un triangle aux trois côtés égaux"
-        height="60px"
-        width="60px"
-      />
+      {' '}
+      <Link href="/">
+        <RocketLaunchIcon
+          sx={{ color: '#AEAFBB ', fontSize: '4rem', cursor: 'pointer' }}
+        />
+      </Link>
       <Box
         sx={{
           display: 'block',
@@ -76,7 +78,7 @@ const Navbar = () => {
         }}
       >
         <Mylink href="/" title="00 HOME" />
-        <Mylink href="/" title="01 DESTINATION" />
+        <Mylink href="/destinations/moon" title="01 DESTINATION" />
         <Mylink href="/" title="02 CREW" />
         <Mylink href="/" title="03 TECHNOLOGY" />
       </Box>

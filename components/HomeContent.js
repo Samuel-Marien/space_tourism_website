@@ -24,7 +24,7 @@ const HomeContent = () => {
         <Box
           sx={{
             textTransform: 'uppercase',
-            fontFamily: "'Barlow Condensed'",
+
             fontSize: 'h4.fontSize',
             letterSpacing: 5,
             fontWeight: 'light'
@@ -46,7 +46,6 @@ const HomeContent = () => {
         </Box>
         <Box
           sx={{
-            fontFamily: "'Barlow Condensed'",
             fontSize: 'h6.fontSize',
             letterSpacing: 1,
             lineHeight: 2,
