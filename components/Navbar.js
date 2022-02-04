@@ -78,7 +78,7 @@ const Navbar = () => {
         }}
       >
         <Mylink href="/" title="00 HOME" />
-        <Mylink href="/destinations/moon" title="01 DESTINATION" />
+        <Mylink href="/destination" title="01 DESTINATION" />
         <Mylink href="/" title="02 CREW" />
         <Mylink href="/" title="03 TECHNOLOGY" />
       </Box>

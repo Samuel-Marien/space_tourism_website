@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 
-import Navbar from '../../components/Navbar'
-import MoonContent from '../../components/MoonContent'
+import Navbar from '../components/Navbar'
+import DestinationContent from '../components/DestinationContent'
 
 const Moon = () => {
   return (
@@ -39,7 +39,7 @@ const Moon = () => {
         />
       </Head>
       <Navbar />
-      <MoonContent />
+      <DestinationContent />
     </div>
   )
 }
