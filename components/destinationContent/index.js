@@ -85,8 +85,6 @@ const ImageDisplayer = (props) => {
 const DestinationContent = () => {
   const [state, setState] = useState('moon')
 
-  console.log(state)
-
   return (
     <Box
       sx={{
@@ -95,7 +93,7 @@ const DestinationContent = () => {
         position: 'absolute',
         top: '12rem',
         width: '100%',
-        pl: 25
+        pl: 35
       }}
     >
       <Box
