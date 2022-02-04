@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Navbar from '../components/Navbar'
-import DestinationContent from '../components/DestinationContent'
+import DestinationContent from '../components/destinationContent'
 
 const Moon = () => {
   return (
