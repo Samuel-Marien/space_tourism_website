@@ -39,16 +39,12 @@ const ContentDisplayer = (props) => {
     switch (destinationName) {
       case 'moon':
         return <Moon />
-        break
       case 'mars':
         return <Mars />
-        break
       case 'europa':
         return <Europa />
-        break
       case 'titan':
         return <Titan />
-        break
       default:
         console.log('problem with switch')
         break

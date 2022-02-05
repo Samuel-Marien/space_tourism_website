@@ -4,6 +4,9 @@ import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 
 import Commander, { CommanderImage } from './Commander'
+import Specialist, { SpecialistImage } from './Specialist'
+import Pilot, { PilotImage } from './Pilot'
+import Engineer, { EngineerImage } from './Engineer'
 
 const MyDiv = styled('div')`
     cursor: pointer;
@@ -29,6 +32,52 @@ const MyButton = (props) => {
       <Box sx={{ width: '1.2rem', height: '1.2rem' }}></Box>
     </MyDiv>
   )
+}
+
+const ContentDisplayer = (props) => {
+  const { crewMember } = props
+
+  const mySwitcher = (crewMember) => {
+    switch (crewMember) {
+      case 'commander':
+        return <Commander />
+      case 'specialist':
+        return <Specialist />
+      case 'pilot':
+        return <Pilot />
+      case 'engineer':
+        return <Engineer />
+      default:
+        console.log('problem with ContentDisplayer switch')
+        break
+    }
+  }
+  return <div>{mySwitcher(crewMember)}</div>
+}
+
+const ImageDisplayer = (props) => {
+  const { crewImage } = props
+
+  const mySwitcher = (crewImage) => {
+    switch (crewImage) {
+      case 'commander':
+        return <CommanderImage />
+        break
+      case 'specialist':
+        return <SpecialistImage />
+        break
+      case 'pilot':
+        return <PilotImage />
+        break
+      case 'engineer':
+        return <EngineerImage />
+        break
+      default:
+        console.log('problem with ImageDisplayer switch')
+        break
+    }
+  }
+  return <div>{mySwitcher(crewImage)}</div>
 }
 
 const CrewContent = () => {
@@ -67,7 +116,7 @@ const CrewContent = () => {
           meet your crew
         </Box>
         <Box>
-          <Commander />
+          <ContentDisplayer crewMember={state} />
         </Box>
         <Box sx={{ display: 'flex' }}>
           <MyButton onClick={() => setState('commander')} />
@@ -77,7 +126,7 @@ const CrewContent = () => {
         </Box>
       </Box>
       <Box sx={{ ml: 20 }}>
-        <CommanderImage />
+        <ImageDisplayer crewImage={state} />
       </Box>
     </Box>
   )
