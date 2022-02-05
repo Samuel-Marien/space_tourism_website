@@ -18,10 +18,12 @@ const MyDiv = styled('div')`
     :hover {
       transition: all .3s ease-out;
       background-color:  #ffffff;
+       box-shadow: 0 0 5px 3px rgba(255,255,255, 3); 
     }
     :active {
       color: #ffffff;
       background-color: gray;
+      box-shadow: none; 
   `
 
 const MyButton = (props) => {
