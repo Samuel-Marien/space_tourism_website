@@ -20,7 +20,7 @@ const MyDiv = styled('div')`
     align-items: center;
     padding-top:1.5rem;
     font-family: 'Cinzel';
-    margin-right:5rem;
+    margin-right:1rem;
 
     :hover {
       transition: all .3s ease-out;
@@ -87,10 +87,9 @@ const TechnologyContent = () => {
         display: 'flex',
         flexDirection: 'column',
         position: 'absolute',
-        top: '12rem',
+        top: { xs: '10rem', lg: '12rem' },
         width: '100%',
-        color: '#ffffff',
-        pl: 25
+        color: '#ffffff'
       }}
     >
       <Box
@@ -98,8 +97,9 @@ const TechnologyContent = () => {
           display: 'flex',
           textTransform: 'uppercase',
           marginBottom: '2rem',
-          fontSize: '2rem',
-          letterSpacing: 5
+          fontSize: { xs: '1.4rem', lg: '2rem' },
+          letterSpacing: 5,
+          pl: { xs: 5, lg: 25 }
         }}
       >
         <Box
@@ -113,31 +113,39 @@ const TechnologyContent = () => {
         </Box>
         space launch 101
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'space-between' }}>
+      <Box
+        sx={{
+          pl: { xs: 0, lg: 25 },
+          display: 'flex',
+          flexDirection: { xs: 'column', lg: 'row' }
+        }}
+      >
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'space-between',
-            alignItems: 'center'
+            flexDirection: { xs: 'column', lg: 'row' },
+            alignItems: 'center',
+            order: { xs: 2, lg: 1 }
           }}
         >
           <Box
             sx={{
               display: 'flex',
-              flexDirection: 'column',
+              flexDirection: { xs: 'row', lg: 'column' },
+              mt: { xs: 8, lg: 0 },
               justifyContent: 'space-between',
-              height: '18rem'
+              height: { xs: 'auto', lg: '20rem' }
             }}
           >
             <MyButton title="1" onClick={() => setState('1')} />
             <MyButton title="2" onClick={() => setState('2')} />
             <MyButton title="3" onClick={() => setState('3')} />
           </Box>
-          <Box>
+          <Box sx={{ order: { xs: 3, lg: 2 }, pl: { xs: 0, lg: 8 } }}>
             <ContentDisplayer typeOfTechno={state} />
           </Box>
         </Box>
-        <Box>
+        <Box sx={{ order: { xs: 1, lg: 3 }, mt: { xs: 5, lg: 0 } }}>
           <ImageDisplayer technoImage={state} />
         </Box>
       </Box>
