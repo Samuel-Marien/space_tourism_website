@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Link from 'next/link'
+
 import Box from '@mui/material/Box'
 
 const HomeContent = () => {
@@ -59,26 +61,28 @@ const HomeContent = () => {
           experience!
         </Box>
       </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          textTransform: 'uppercase',
-          backgroundColor: '#ffffff',
-          fontFamily: 'Cinzel',
-          fontSize: '2rem',
-          fontWeight: 'medium',
-          width: '20rem',
-          height: '20rem',
-          padding: '5rem',
-          borderRadius: '10rem',
-          marginRight: '12rem',
-          textAlign: 'left',
-          cursor: 'pointer'
-        }}
-      >
-        explore
-      </Box>
+      <Link href="/destination">
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            textTransform: 'uppercase',
+            backgroundColor: '#ffffff',
+            fontFamily: 'Cinzel',
+            fontSize: '2rem',
+            fontWeight: 'medium',
+            width: '20rem',
+            height: '20rem',
+            padding: '5rem',
+            borderRadius: '10rem',
+            marginRight: '12rem',
+            textAlign: 'left',
+            cursor: 'pointer'
+          }}
+        >
+          explore
+        </Box>
+      </Link>
     </Box>
   )
 }

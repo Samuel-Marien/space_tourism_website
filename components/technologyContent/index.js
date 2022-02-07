@@ -65,13 +65,10 @@ const ImageDisplayer = (props) => {
     switch (technoImage) {
       case '1':
         return <LauchImage />
-        break
       case '2':
         return <SpaceportImage />
-        break
       case '3':
         return <CapsuleImage />
-        break
 
       default:
         console.log('problem with switch')
