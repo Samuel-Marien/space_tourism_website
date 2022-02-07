@@ -8,14 +8,25 @@ export const PilotImage = () => {
       component="img"
       alt="The house from the offer."
       src="/images/image-victor-glover.png"
-      sx={{ width: '120%' }}
+      sx={{
+        width: { xs: '64%', lg: '90%' },
+        ml: { xs: 0, lg: 20 },
+        mt: { xs: 5, lg: 4 }
+      }}
     />
   )
 }
 
 const Pilot = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', mt: 20 }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: { xs: 'center', lg: 'start' },
+        mt: { xs: 0, lg: 20 }
+      }}
+    >
       <Box
         sx={{
           textTransform: 'uppercase',
@@ -39,9 +50,9 @@ const Pilot = () => {
       </Box>
       <Box
         sx={{
-          width: '33rem',
+          width: { xs: '45rem', lg: '31rem' },
           marginTop: '1rem',
-          textAlign: 'justify',
+          textAlign: { xs: 'center', lg: 'justify' },
           color: '#ffffff',
           lineHeight: 1.5,
           fontSize: 'h5.fontSize'

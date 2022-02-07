@@ -8,14 +8,25 @@ export const CommanderImage = () => {
       component="img"
       alt="The house from the offer."
       src="/images/image-douglas-hurley.png"
-      sx={{ width: '90%', ml: 20 }}
+      sx={{
+        width: { xs: '60%', lg: '90%' },
+        ml: { xs: 0, lg: 20 },
+        mt: { xs: 5, lg: 0 }
+      }}
     />
   )
 }
 
 const Commander = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', mt: 20 }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: { xs: 'center', lg: 'start' },
+        mt: { xs: 0, lg: 20 }
+      }}
+    >
       <Box
         sx={{
           textTransform: 'uppercase',
@@ -39,9 +50,9 @@ const Commander = () => {
       </Box>
       <Box
         sx={{
-          width: '31rem',
+          width: { xs: '40rem', lg: '31rem' },
           marginTop: '1rem',
-          textAlign: 'justify',
+          textAlign: { xs: 'center', lg: 'justify' },
           color: '#ffffff',
           lineHeight: 1.5,
           fontSize: 'h5.fontSize'

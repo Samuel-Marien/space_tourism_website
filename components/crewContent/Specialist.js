@@ -8,14 +8,25 @@ export const SpecialistImage = () => {
       component="img"
       alt="The house from the offer."
       src="/images/image-mark-shuttleworth.png"
-      sx={{ width: '120%' }}
+      sx={{
+        width: { xs: '50%', lg: '90%' },
+        ml: { xs: 0, lg: 20 },
+        mt: { xs: 6, lg: 0 }
+      }}
     />
   )
 }
 
 const Specialist = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', mt: 20 }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: { xs: 'center', lg: 'start' },
+        mt: { xs: 0, lg: 20 }
+      }}
+    >
       <Box
         sx={{
           textTransform: 'uppercase',
@@ -39,9 +50,9 @@ const Specialist = () => {
       </Box>
       <Box
         sx={{
-          width: '33rem',
+          width: { xs: '40rem', lg: '31rem' },
           marginTop: '1rem',
-          textAlign: 'justify',
+          textAlign: { xs: 'center', lg: 'justify' },
           color: '#ffffff',
           lineHeight: 1.5,
           fontSize: 'h5.fontSize'

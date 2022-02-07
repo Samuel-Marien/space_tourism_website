@@ -9,16 +9,16 @@ import Pilot, { PilotImage } from './Pilot'
 import Engineer, { EngineerImage } from './Engineer'
 
 const MyDiv = styled('div')`
+
     cursor: pointer;
     margin-right: 2rem;
-    margin-top: 7rem;
     background-color: gray;
     border-radius:2rem;
 
     :hover {
       transition: all .3s ease-out;
       background-color:  #ffffff;
-       box-shadow: 0 0 5px 3px rgba(255,255,255, 3); 
+      box-shadow: 0 0 5px 3px rgba(255,255,255, 3);
     }
     :active {
       color: #ffffff;
@@ -31,7 +31,12 @@ const MyButton = (props) => {
 
   return (
     <MyDiv onClick={onClick}>
-      <Box sx={{ width: '1.2rem', height: '1.2rem' }}></Box>
+      <Box
+        sx={{
+          width: { xs: '.8rem', lg: '1rem' },
+          height: { xs: '.8rem', lg: '1rem' }
+        }}
+      ></Box>
     </MyDiv>
   )
 }
@@ -89,10 +94,10 @@ const CrewContent = () => {
     <Box
       sx={{
         display: 'flex',
+        flexDirection: { xs: 'column', lg: 'row' },
         position: 'absolute',
-        top: '12rem',
-        width: '100%',
-        pl: 25
+        top: { xs: '10rem', lg: '12rem' },
+        width: '100%'
       }}
     >
       <Box>
@@ -101,9 +106,10 @@ const CrewContent = () => {
             display: 'flex',
             textTransform: 'uppercase',
             color: '#ffffff',
-            marginBottom: '5rem',
-            fontSize: '2rem',
-            letterSpacing: 5
+            marginBottom: { xs: '3rem', lg: '5rem' },
+            fontSize: { xs: '1.4rem', lg: '2rem' },
+            letterSpacing: 5,
+            pl: { xs: 5, lg: 25 }
           }}
         >
           <Box
@@ -117,10 +123,21 @@ const CrewContent = () => {
           </Box>
           meet your crew
         </Box>
-        <Box>
+        <Box
+          sx={{
+            pl: { xs: 0, lg: 25 }
+          }}
+        >
           <ContentDisplayer crewMember={state} />
         </Box>
-        <Box sx={{ display: 'flex' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: { xs: 'center', lg: 'start' },
+            pl: { xs: 5, lg: 25 },
+            mt: { xs: '2rem', lg: '7rem' }
+          }}
+        >
           <MyButton onClick={() => setState('commander')} />
           <MyButton onClick={() => setState('specialist')} />
           <MyButton onClick={() => setState('pilot')} />
@@ -129,10 +146,7 @@ const CrewContent = () => {
       </Box>
       <Box
         sx={{
-          ml: 15,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'end'
+          textAlign: { xs: 'center', lg: 'justify' }
         }}
       >
         <ImageDisplayer crewImage={state} />

@@ -13,12 +13,11 @@ const MyDiv = styled('div')`
     font-size: 1.3rem;
     padding: 1rem 0 1rem 0;
     margin-right: 2rem;
-
     color: #ffffff;
+    
     :hover {
       transition: all .3s ease-out;
       color: gray;
-      
       box-shadow: 0px -3px 0px gray inset;
     }
     :active {
@@ -84,8 +83,7 @@ const DestinationContent = () => {
         flexDirection: 'column',
         position: 'absolute',
         top: { xs: '10rem', lg: '12rem' },
-        width: '100%',
-        pl: { xs: 5, lg: 25 }
+        width: '100%'
       }}
     >
       <Box
@@ -95,7 +93,8 @@ const DestinationContent = () => {
           color: '#ffffff',
           marginBottom: '5rem',
           fontSize: { xs: '1.4rem', lg: '2rem' },
-          letterSpacing: 5
+          letterSpacing: 5,
+          pl: { xs: 5, lg: 25 }
         }}
       >
         <Box

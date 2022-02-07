@@ -8,14 +8,25 @@ export const EngineerImage = () => {
       component="img"
       alt="The house from the offer."
       src="/images/image-anousheh-ansari.png"
-      sx={{ width: '120%' }}
+      sx={{
+        width: { xs: '70%', lg: '100%' },
+        ml: { xs: 0, lg: 20 },
+        mt: { xs: 7, lg: 5 }
+      }}
     />
   )
 }
 
 const Engineer = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', mt: 20 }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: { xs: 'center', lg: 'start' },
+        mt: { xs: 0, lg: 20 }
+      }}
+    >
       <Box
         sx={{
           textTransform: 'uppercase',
@@ -39,9 +50,9 @@ const Engineer = () => {
       </Box>
       <Box
         sx={{
-          width: '33rem',
+          width: { xs: '40rem', lg: '31rem' },
           marginTop: '1rem',
-          textAlign: 'justify',
+          textAlign: { xs: 'center', lg: 'justify' },
           color: '#ffffff',
           lineHeight: 1.5,
           fontSize: 'h5.fontSize'
