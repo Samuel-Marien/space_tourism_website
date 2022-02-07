@@ -8,7 +8,7 @@ export const CommanderImage = () => {
       component="img"
       alt="The house from the offer."
       src="/images/image-douglas-hurley.png"
-      sx={{ width: '110%' }}
+      sx={{ width: '90%', ml: 20 }}
     />
   )
 }
@@ -39,7 +39,7 @@ const Commander = () => {
       </Box>
       <Box
         sx={{
-          width: '30rem',
+          width: '31rem',
           marginTop: '1rem',
           textAlign: 'justify',
           color: '#ffffff',

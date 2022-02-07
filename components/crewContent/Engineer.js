@@ -8,7 +8,7 @@ export const EngineerImage = () => {
       component="img"
       alt="The house from the offer."
       src="/images/image-anousheh-ansari.png"
-      sx={{ width: '130%' }}
+      sx={{ width: '120%' }}
     />
   )
 }
@@ -39,7 +39,7 @@ const Engineer = () => {
       </Box>
       <Box
         sx={{
-          width: '30rem',
+          width: '33rem',
           marginTop: '1rem',
           textAlign: 'justify',
           color: '#ffffff',

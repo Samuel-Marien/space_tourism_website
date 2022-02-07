@@ -89,7 +89,7 @@ const DestinationContent = () => {
         position: 'absolute',
         top: '12rem',
         width: '100%',
-        pl: 35
+        pl: 25
       }}
     >
       <Box

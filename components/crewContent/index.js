@@ -92,7 +92,7 @@ const CrewContent = () => {
         position: 'absolute',
         top: '12rem',
         width: '100%',
-        pl: 35
+        pl: 25
       }}
     >
       <Box>
@@ -127,7 +127,14 @@ const CrewContent = () => {
           <MyButton onClick={() => setState('engineer')} />
         </Box>
       </Box>
-      <Box sx={{ ml: 20 }}>
+      <Box
+        sx={{
+          ml: 15,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'end'
+        }}
+      >
         <ImageDisplayer crewImage={state} />
       </Box>
     </Box>
