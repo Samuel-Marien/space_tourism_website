@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import { styled } from '@mui/material/styles'
 
 import Box from '@mui/material/Box'
+
 import Lauch, { LauchImage } from './Lauch'
-import { withTheme } from 'styled-components'
-import { height } from '@mui/system'
+import Spaceport, { SpaceportImage } from './Spaceport'
+import Capsule, { CapsuleImage } from './Capsule'
 
 const MyDiv = styled('div')`
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     width:5rem;
     height:5rem;
     border: 1px solid gray;
@@ -18,7 +19,8 @@ const MyDiv = styled('div')`
     flex-direction:column;
     align-items: center;
     padding-top:1.5rem;
-
+    font-family: 'Cinzel';
+    margin-right:5rem;
 
     :hover {
       transition: all .3s ease-out;
@@ -34,6 +36,49 @@ const MyButton = (props) => {
   const { title, onClick } = props
 
   return <MyDiv onClick={onClick}>{title}</MyDiv>
+}
+
+const ContentDisplayer = (props) => {
+  const { typeOfTechno } = props
+
+  const mySwitcher = (typeOfTechno) => {
+    switch (typeOfTechno) {
+      case '1':
+        return <Lauch />
+      case '2':
+        return <Spaceport />
+      case '3':
+        return <Capsule />
+
+      default:
+        console.log('problem with switch')
+        break
+    }
+  }
+  return <div>{mySwitcher(typeOfTechno)}</div>
+}
+
+const ImageDisplayer = (props) => {
+  const { technoImage } = props
+
+  const mySwitcher = (technoImage) => {
+    switch (technoImage) {
+      case '1':
+        return <LauchImage />
+        break
+      case '2':
+        return <SpaceportImage />
+        break
+      case '3':
+        return <CapsuleImage />
+        break
+
+      default:
+        console.log('problem with switch')
+        break
+    }
+  }
+  return <div>{mySwitcher(technoImage)}</div>
 }
 
 const TechnologyContent = () => {
@@ -91,10 +136,12 @@ const TechnologyContent = () => {
             <MyButton title="2" onClick={() => setState('2')} />
             <MyButton title="3" onClick={() => setState('3')} />
           </Box>
-          <Lauch />
+          <Box>
+            <ContentDisplayer typeOfTechno={state} />
+          </Box>
         </Box>
         <Box>
-          <LauchImage />
+          <ImageDisplayer technoImage={state} />
         </Box>
       </Box>
     </Box>

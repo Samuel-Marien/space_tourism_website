@@ -2,12 +2,12 @@ import React from 'react'
 
 import Box from '@mui/material/Box'
 
-export const LauchImage = () => {
+export const SpaceportImage = () => {
   return (
     <Box
       component="img"
       alt="The house from the offer."
-      src="/images/image-launch-vehicle-portrait.jpg"
+      src="/images/image-spaceport-portrait.jpg"
       sx={{
         width: '35rem',
         height: '35rem'
@@ -16,7 +16,7 @@ export const LauchImage = () => {
   )
 }
 
-const Lauch = () => {
+const Spaceport = () => {
   return (
     <Box
       sx={{
@@ -43,7 +43,7 @@ const Lauch = () => {
           marginTop: '.5rem'
         }}
       >
-        Launch vehicle
+        Spaceport
       </Box>
       <Box
         sx={{
@@ -53,14 +53,13 @@ const Lauch = () => {
           marginTop: '1rem'
         }}
       >
-        A launch vehicle or carrier rocket is a rocket-propelled vehicle used to
-        carry a payload from Earth's surface to space, usually to Earth orbit or
-        beyond. Our WEB-X carrier rocket is the most powerful in operation.
-        Standing 150 metres tall, it's quite an awe-inspiring sight on the
-        launch pad!
+        A spaceport or cosmodrome is a site for launching (or receiving)
+        spacecraft, by analogy to the seaport for ships or airport for aircraft.
+        Based in the famous Cape Canaveral, our spaceport is ideally situated to
+        take advantage of the Earth’s rotation for launch. pad!
       </Box>
     </Box>
   )
 }
 
-export default Lauch
+export default Spaceport

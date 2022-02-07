@@ -2,12 +2,12 @@ import React from 'react'
 
 import Box from '@mui/material/Box'
 
-export const LauchImage = () => {
+export const CapsuleImage = () => {
   return (
     <Box
       component="img"
       alt="The house from the offer."
-      src="/images/image-launch-vehicle-portrait.jpg"
+      src="/images/image-space-capsule-portrait.jpg"
       sx={{
         width: '35rem',
         height: '35rem'
@@ -16,7 +16,7 @@ export const LauchImage = () => {
   )
 }
 
-const Lauch = () => {
+const Capsule = () => {
   return (
     <Box
       sx={{
@@ -43,7 +43,7 @@ const Lauch = () => {
           marginTop: '.5rem'
         }}
       >
-        Launch vehicle
+        Space capsule
       </Box>
       <Box
         sx={{
@@ -53,14 +53,14 @@ const Lauch = () => {
           marginTop: '1rem'
         }}
       >
-        A launch vehicle or carrier rocket is a rocket-propelled vehicle used to
-        carry a payload from Earth's surface to space, usually to Earth orbit or
-        beyond. Our WEB-X carrier rocket is the most powerful in operation.
-        Standing 150 metres tall, it's quite an awe-inspiring sight on the
-        launch pad!
+        A space capsule is an often-crewed spacecraft that uses a blunt-body
+        reentry capsule to reenter the Earth's atmosphere without wings. Our
+        capsule is where you'll spend your time during the flight. It includes a
+        space gym, cinema, and plenty of other activities to keep you
+        entertained.
       </Box>
     </Box>
   )
 }
 
-export default Lauch
+export default Capsule

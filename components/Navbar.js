@@ -71,7 +71,7 @@ const Navbar = () => {
           display: 'flex',
           justifyContent: 'space-between',
           background: 'rgba(255,255,255,.1)',
-          backdropFilter: 'blur(25px)',
+          backdropFilter: 'blur(10px)',
           width: '60rem',
           pr: 15,
           pl: 15
