@@ -9,8 +9,8 @@ export const EuropaImage = () => {
       alt="The house from the offer."
       src="/images/image-europa.png"
       sx={{
-        width: '35rem',
-        height: '35rem'
+        width: { xs: '20rem', lg: '35rem' },
+        height: { xs: '20rem', lg: '35rem' }
       }}
     />
   )
@@ -23,9 +23,10 @@ const Europa = () => {
         sx={{
           textTransform: 'uppercase',
           fontFamily: 'Cinzel',
-          fontSize: '6rem',
+          fontSize: { xs: '5rem', lg: '6rem' },
           letterSpacing: 15,
-          fontWeight: 'light'
+          fontWeight: 'light',
+          textAlign: { xs: 'center', lg: 'justify' }
         }}
       >
         Europa
@@ -37,7 +38,7 @@ const Europa = () => {
           lineHeight: 2,
           width: '30rem',
           marginTop: '1rem',
-          textAlign: 'justify'
+          textAlign: { xs: 'center', lg: 'justify' }
         }}
       >
         The smallest of the four Galilean moons orbiting Jupiter, Europa is a
@@ -56,10 +57,18 @@ const Europa = () => {
       <Box
         sx={{
           display: 'flex',
+          justifyContent: { xs: 'center', lg: 'start' },
           marginTop: '2rem'
         }}
       >
-        <Box sx={{ display: 'flex', flexDirection: 'column', mr: 5 }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: { xs: 'center', lg: 'start' },
+            mr: { xs: 15, lg: 5 }
+          }}
+        >
           <Box sx={{ textTransform: 'uppercase' }}>Avg. distance</Box>
           <Box
             sx={{
@@ -72,7 +81,16 @@ const Europa = () => {
           </Box>
         </Box>
         <Box>
-          <Box sx={{ textTransform: 'uppercase' }}>Est. travel time</Box>
+          <Box
+            sx={{
+              textTransform: 'uppercase',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: { xs: 'center', lg: 'start' }
+            }}
+          >
+            Est. travel time
+          </Box>
           <Box
             sx={{
               fontFamily: 'Cinzel',

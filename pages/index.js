@@ -1,9 +1,9 @@
 import Head from 'next/head'
+
 import Box from '@mui/material/Box'
 
 import Navbar from '../components/Navbar'
 import HomeContent from '../components/HomeContent'
-import { maxWidth } from '@mui/system'
 
 const desktopBg = `/images/background-home-desktop.jpg`
 const tabletBg = `/images/background-home-tablet.jpg`

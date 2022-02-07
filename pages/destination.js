@@ -1,14 +1,23 @@
 import React from 'react'
 import Head from 'next/head'
 
+import Box from '@mui/material/Box'
+
 import Navbar from '../components/Navbar'
 import DestinationContent from '../components/destinationContent'
 
+const desktopBg = `/images/background-destination-desktop.jpg`
+const tabletBg = `/images/background-destination-tablet.jpg`
+
 const Moon = () => {
   return (
-    <div
-      style={{
-        background: `url(/images/background-destination-desktop.jpg) `,
+    <Box
+      sx={{
+        // background: `url(/images/background-destination-desktop.jpg) `,
+        backgroundImage: {
+          xs: `url(${tabletBg}) `,
+          lg: `url(${desktopBg}) `
+        },
         height: '100vh',
         position: 'fixed',
         top: 0,
@@ -40,7 +49,7 @@ const Moon = () => {
       </Head>
       <Navbar />
       <DestinationContent />
-    </div>
+    </Box>
   )
 }
 

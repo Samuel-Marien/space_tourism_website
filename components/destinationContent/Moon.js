@@ -9,8 +9,8 @@ export const MoonImage = () => {
       alt="The house from the offer."
       src="/images/image-moon.png"
       sx={{
-        width: '35rem',
-        height: '35rem'
+        width: { xs: '20rem', lg: '35rem' },
+        height: { xs: '20rem', lg: '35rem' }
       }}
     />
   )
@@ -23,9 +23,10 @@ const Moon = () => {
         sx={{
           textTransform: 'uppercase',
           fontFamily: 'Cinzel',
-          fontSize: '6rem',
+          fontSize: { xs: '5rem', lg: '6rem' },
           letterSpacing: 15,
-          fontWeight: 'light'
+          fontWeight: 'light',
+          textAlign: { xs: 'center', lg: 'justify' }
         }}
       >
         Moon
@@ -35,9 +36,9 @@ const Moon = () => {
           fontSize: 'h6.fontSize',
           letterSpacing: 1,
           lineHeight: 2,
-          width: '30rem',
+
           marginTop: '1rem',
-          textAlign: 'justify'
+          textAlign: { xs: 'center', lg: 'justify' }
         }}
       >
         See our planet as you’ve never seen it before. A perfect relaxing trip
@@ -56,10 +57,18 @@ const Moon = () => {
       <Box
         sx={{
           display: 'flex',
+          justifyContent: { xs: 'center', lg: 'start' },
           marginTop: '2rem'
         }}
       >
-        <Box sx={{ display: 'flex', flexDirection: 'column', mr: 5 }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: { xs: 'center', lg: 'start' },
+            mr: { xs: 15, lg: 5 }
+          }}
+        >
           <Box sx={{ textTransform: 'uppercase' }}>Avg. distance</Box>
           <Box
             sx={{
@@ -72,7 +81,16 @@ const Moon = () => {
           </Box>
         </Box>
         <Box>
-          <Box sx={{ textTransform: 'uppercase' }}>Est. travel time</Box>
+          <Box
+            sx={{
+              textTransform: 'uppercase',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: { xs: 'center', lg: 'start' }
+            }}
+          >
+            Est. travel time
+          </Box>
           <Box
             sx={{
               fontFamily: 'Cinzel',

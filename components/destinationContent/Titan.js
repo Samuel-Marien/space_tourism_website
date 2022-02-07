@@ -9,8 +9,8 @@ export const TitanImage = () => {
       alt="The house from the offer."
       src="/images/image-titan.png"
       sx={{
-        width: '35rem',
-        height: '35rem'
+        width: { xs: '20rem', lg: '35rem' },
+        height: { xs: '20rem', lg: '35rem' }
       }}
     />
   )
@@ -23,9 +23,10 @@ const Titan = () => {
         sx={{
           textTransform: 'uppercase',
           fontFamily: 'Cinzel',
-          fontSize: '6rem',
+          fontSize: { xs: '5rem', lg: '6rem' },
           letterSpacing: 15,
-          fontWeight: 'light'
+          fontWeight: 'light',
+          textAlign: { xs: 'center', lg: 'justify' }
         }}
       >
         Titan
@@ -37,7 +38,7 @@ const Titan = () => {
           lineHeight: 2,
           width: '30rem',
           marginTop: '1rem',
-          textAlign: 'justify'
+          textAlign: { xs: 'center', lg: 'justify' }
         }}
       >
         The only moon known to have a dense atmosphere other than Earth, Titan
@@ -55,10 +56,18 @@ const Titan = () => {
       <Box
         sx={{
           display: 'flex',
+          justifyContent: { xs: 'center', lg: 'start' },
           marginTop: '2rem'
         }}
       >
-        <Box sx={{ display: 'flex', flexDirection: 'column', mr: 5 }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: { xs: 'center', lg: 'start' },
+            mr: { xs: 15, lg: 5 }
+          }}
+        >
           <Box sx={{ textTransform: 'uppercase' }}>Avg. distance</Box>
           <Box
             sx={{
@@ -71,7 +80,16 @@ const Titan = () => {
           </Box>
         </Box>
         <Box>
-          <Box sx={{ textTransform: 'uppercase' }}>Est. travel time</Box>
+          <Box
+            sx={{
+              textTransform: 'uppercase',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: { xs: 'center', lg: 'start' }
+            }}
+          >
+            Est. travel time
+          </Box>
           <Box
             sx={{
               fontFamily: 'Cinzel',

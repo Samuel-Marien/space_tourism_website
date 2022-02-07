@@ -60,16 +60,12 @@ const ImageDisplayer = (props) => {
     switch (destinationImage) {
       case 'moon':
         return <MoonImage />
-        break
       case 'mars':
         return <MarsImage />
-        break
       case 'europa':
         return <EuropaImage />
-        break
       case 'titan':
         return <TitanImage />
-        break
       default:
         console.log('problem with switch')
         break
@@ -87,9 +83,9 @@ const DestinationContent = () => {
         display: 'flex',
         flexDirection: 'column',
         position: 'absolute',
-        top: '12rem',
+        top: { xs: '10rem', lg: '12rem' },
         width: '100%',
-        pl: 25
+        pl: { xs: 5, lg: 25 }
       }}
     >
       <Box
@@ -98,7 +94,7 @@ const DestinationContent = () => {
           textTransform: 'uppercase',
           color: '#ffffff',
           marginBottom: '5rem',
-          fontSize: '2rem',
+          fontSize: { xs: '1.4rem', lg: '2rem' },
           letterSpacing: 5
         }}
       >
@@ -116,7 +112,9 @@ const DestinationContent = () => {
       <Box
         sx={{
           display: 'flex',
+          flexDirection: { xs: 'column', lg: 'row' },
           justifyContent: 'space-around',
+          alignItems: 'center',
           padding: '0 5rem 0 5rem'
         }}
       >
@@ -127,7 +125,14 @@ const DestinationContent = () => {
             width: '30rem'
           }}
         >
-          <Box sx={{ textTransform: 'uppercase', display: 'flex' }}>
+          <Box
+            sx={{
+              textTransform: 'uppercase',
+              display: 'flex',
+              justifyContent: { xs: 'center', lg: 'start' },
+              mt: { xs: '4rem', lg: 0 }
+            }}
+          >
             <MyButton title="Moon" onClick={() => setState('moon')} />
             <MyButton title="Mars" onClick={() => setState('mars')} />
             <MyButton title="Europa" onClick={() => setState('europa')} />
