@@ -9,26 +9,27 @@ const HomeContent = () => {
     <Box
       sx={{
         display: 'flex',
+        flexDirection: { xs: 'column', lg: 'row' },
         justifyContent: 'space-between',
-        alignItems: 'end',
+        alignItems: { xs: 'center', lg: 'end' },
         position: 'absolute',
-        top: '25rem',
+        top: { xs: '10rem', lg: '25rem' },
         width: '100%',
-        pl: 15
+        pl: { xs: 0, lg: 15 },
+        textAlign: 'center'
       }}
     >
       <Box
         sx={{
           color: '#ffffff',
-          padding: '0 0 0 10rem'
+          padding: { xs: 0, lg: '0 0 0 10rem' }
         }}
       >
         <Box
           sx={{
             textTransform: 'uppercase',
-
-            fontSize: 'h4.fontSize',
-            letterSpacing: 5,
+            fontSize: { sx: 'h5.fontSize', lg: 'h4.fontSize' },
+            letterSpacing: { xs: 3, lg: 5 },
             fontWeight: 'light'
           }}
         >
@@ -38,10 +39,10 @@ const HomeContent = () => {
           sx={{
             textTransform: 'uppercase',
             fontFamily: 'Cinzel',
-            fontSize: '8rem',
-            letterSpacing: 15,
+            fontSize: { xs: '12rem', lg: '8rem' },
+            letterSpacing: { xs: 5, lg: 15 },
             fontWeight: 'light',
-            marginTop: '2rem'
+            marginTop: { xs: '.5rem', lg: '2rem' }
           }}
         >
           Space
@@ -51,7 +52,7 @@ const HomeContent = () => {
             fontSize: 'h6.fontSize',
             letterSpacing: 1,
             lineHeight: 2,
-            width: '30rem',
+            width: { xs: '40rem', lg: '30rem' },
             marginTop: '2rem'
           }}
         >
@@ -75,9 +76,11 @@ const HomeContent = () => {
             height: '20rem',
             padding: '5rem',
             borderRadius: '10rem',
-            marginRight: '12rem',
+            marginRight: { xs: '0', lg: '12rem' },
+            marginTop: { xs: '10rem', lg: 0 },
             textAlign: 'left',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            boxShadow: 3
           }}
         >
           explore
