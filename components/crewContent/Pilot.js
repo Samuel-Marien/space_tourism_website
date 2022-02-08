@@ -50,7 +50,7 @@ const Pilot = () => {
       </Box>
       <Box
         sx={{
-          width: { xs: '45rem', lg: '31rem' },
+          width: { xs: '45rem', lg: '35rem' },
           marginTop: '1rem',
           textAlign: { xs: 'center', lg: 'justify' },
           color: '#ffffff',

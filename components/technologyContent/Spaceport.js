@@ -2,17 +2,33 @@ import React from 'react'
 
 import Box from '@mui/material/Box'
 
+const desktopBg = `/images/image-spaceport-portrait.jpg`
+const tabletBg = `/images/image-spaceport-landscape.jpg`
+
 export const SpaceportImage = () => {
   return (
-    <Box
-      component="img"
-      alt="The house from the offer."
-      src="/images/image-spaceport-portrait.jpg"
-      sx={{
-        width: '35rem',
-        height: '35rem'
-      }}
-    />
+    <div>
+      <Box
+        component="img"
+        alt="The house from the offer."
+        src={tabletBg}
+        sx={{
+          width: '100%',
+          height: 'auto',
+          display: { xs: 'block', lg: 'none' }
+        }}
+      />
+      <Box
+        component="img"
+        alt="The house from the offer."
+        src={desktopBg}
+        sx={{
+          display: { xs: 'none', lg: 'block' },
+          width: '35rem',
+          height: '35rem'
+        }}
+      />
+    </div>
   )
 }
 
@@ -22,15 +38,18 @@ const Spaceport = () => {
       sx={{
         display: 'flex',
         flexDirection: 'column',
+        alignItems: { xs: 'center', lg: 'start' },
+        justifyContent: { xs: 'center', lg: 'start' },
         height: '18rem',
-        marginRight: '10rem'
+        mr: { xs: 0, lg: '10rem' }
       }}
     >
       <Box
         sx={{
           textTransform: 'uppercase',
-          fontSize: '1.3rem',
-          color: 'gray'
+          fontSize: { xs: '1.1rem', lg: '1.3rem' },
+          color: 'gray',
+          mt: { xs: 8, lg: 0 }
         }}
       >
         The terminology...
@@ -39,18 +58,20 @@ const Spaceport = () => {
         sx={{
           textTransform: 'uppercase',
           fontFamily: 'Cinzel',
-          fontSize: '3.5rem',
-          marginTop: '.5rem'
+          fontSize: { xs: '2.5rem', lg: '3.5rem' },
+          mt: { xs: 3, lg: '.5rem' }
         }}
       >
         Spaceport
       </Box>
       <Box
         sx={{
-          textAlign: 'justify',
+          textAlign: { xs: 'center', lg: 'justify' },
           lineHeight: 1.5,
           fontSize: 'h5.fontSize',
-          marginTop: '1rem'
+          marginTop: '1rem',
+          width: { xs: '35rem', lg: 'auto' },
+          color: 'gray'
         }}
       >
         A spaceport or cosmodrome is a site for launching (or receiving)
